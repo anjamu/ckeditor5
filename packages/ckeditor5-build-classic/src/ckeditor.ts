@@ -10,13 +10,10 @@ import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { UploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
-import { Bold, Italic } from '@ckeditor/ckeditor5-basic-styles';
 import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
-import { CKBox } from '@ckeditor/ckeditor5-ckbox';
-import { CKFinder } from '@ckeditor/ckeditor5-ckfinder';
 import { EasyImage } from '@ckeditor/ckeditor5-easy-image';
 import { Heading } from '@ckeditor/ckeditor5-heading';
-import { Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
+import { AutoImage, Image, ImageCaption, ImageStyle, ImageToolbar, ImageUpload, PictureEditing } from '@ckeditor/ckeditor5-image';
 import { Indent } from '@ckeditor/ckeditor5-indent';
 import { Link } from '@ckeditor/ckeditor5-link';
 import { List } from '@ckeditor/ckeditor5-list';
@@ -26,36 +23,41 @@ import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
 import { Table, TableToolbar } from '@ckeditor/ckeditor5-table';
 import { TextTransformation } from '@ckeditor/ckeditor5-typing';
 import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
+import { Bold, Italic, Code } from '@ckeditor/ckeditor5-basic-styles';
+import { CodeBlock } from '@ckeditor/ckeditor5-code-block/';
+import { DataFilter } from '@ckeditor/ckeditor5-html-support';
 
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
-		Essentials,
 		Alignment,
-		UploadAdapter,
 		Autoformat,
-		Bold,
-		Italic,
+		AutoImage,
 		BlockQuote,
-		CKBox,
-		CKFinder,
+		Bold,
+		Code,
+		CodeBlock,
+		DataFilter,
 		CloudServices,
 		EasyImage,
+		Essentials,
 		Heading,
+		MediaEmbed,
 		Image,
 		ImageCaption,
 		ImageStyle,
 		ImageToolbar,
 		ImageUpload,
 		Indent,
+		Italic,
 		Link,
 		List,
-		MediaEmbed,
 		Paragraph,
 		PasteFromOffice,
 		PictureEditing,
 		Table,
 		TableToolbar,
-		TextTransformation
+		TextTransformation,
+		UploadAdapter
 	];
 
 	public static override defaultConfig = {
