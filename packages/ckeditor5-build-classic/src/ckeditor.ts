@@ -6,6 +6,7 @@
 // The editor creator to use.
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
+import { Alignment } from '@ckeditor/ckeditor5-alignment';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { UploadAdapter } from '@ckeditor/ckeditor5-adapter-ckfinder';
 import { Autoformat } from '@ckeditor/ckeditor5-autoformat';
@@ -29,6 +30,7 @@ import { CloudServices } from '@ckeditor/ckeditor5-cloud-services';
 export default class ClassicEditor extends ClassicEditorBase {
 	public static override builtinPlugins = [
 		Essentials,
+		Alignment,
 		UploadAdapter,
 		Autoformat,
 		Bold,
